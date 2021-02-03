@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class FileMain {
 
     public static void main(String[] args) {
-        String directoryName = "E:/SteamLibrary";
+        String directoryName = "E:/Конкурс на Onliner";
         File dir = new File(directoryName);
         String fileNameIn = ".\\src\\main\\java\\treeDirectory";
         try (FileWriter fileWriter = new FileWriter(fileNameIn);
@@ -12,8 +12,8 @@ public class FileMain {
             if (dir.exists() && dir.isDirectory()) {
                 writeTreeDirectory(dir, bufferedWriter, 0);
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException x) {
+            x.printStackTrace();
         }
         System.out.println("Количество папок - " + countOfFolders(listOfInfo(fileNameIn)));
         System.out.println("Количество файлов - " + countOfFiles(listOfInfo(fileNameIn)));
@@ -42,8 +42,8 @@ public class FileMain {
                     }
                 }
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException x) {
+            x.printStackTrace();
         }
     }
 
@@ -54,8 +54,8 @@ public class FileMain {
             while ((line = bufferedReader.readLine()) != null) {
                 list.add(line);
             }
-        } catch (IOException ex) {
-            ex.printStackTrace();
+        } catch (IOException x) {
+            x.printStackTrace();
         }
         return list;
     }
